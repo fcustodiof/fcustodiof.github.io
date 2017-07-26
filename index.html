@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="index" ng-controller="indexController">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>My Spot</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="css/fonts/material-icons/material-icons.css">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="indigo darken-4 white-text">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">My Spot</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Usuario</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main ng-view class="container">
+  </main>
+  <footer class="page-footer indigo darken-4">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Copyright Engenharia de Software
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/angular-cookies.js"></script>
+  <script src="js/angular-materialize.min.js"></script>
+  <script src="js/angular-md5.js"></script>
+  <!-- controllers -->
+  <script src="controllers/index.js"></script>
+  <script src="controllers/routes.js"></script>
+  <script src="controllers/homeController.js"></script>
+  <script src="controllers/gerenciarQuartosController.js"></script>
+  <!-- Services -->
+  <script src="controllers/services/navService.js"></script>
+  <script src="controllers/services/userService.js"></script>
+  <script src="controllers/services/requestService.js"></script>
+
+  </body>
+</html>
