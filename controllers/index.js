@@ -1,17 +1,23 @@
-angular.module('index',[
-        'ngRoute', 
-        'ngCookies',
-        'routes', 
-        'requestService',
-        'ui.materialize', 
-        'angular-md5', 
-        'homeController', 
-        'userService', 
-        'navService', 
-        'gerenciarQuartosController',
-        'reservarController'
-    ])
+angular.module('index',[ 'ngRoute', 'home'])
 
-.controller('indexController', function($location){
-    $location.path('/');
+.controller('indexController', function($location, $scope, $window){
+    $(".button-collapse").sideNav();
+    $scope.redirectToLinkedin = function () {
+        $window.open('https://www.linkedin.com/in/felipe-custodio-firmino/', '_blank');
+    };
 })
+
+.config(function($routeProvider, $locationProvider) {
+    
+        $routeProvider.when('/', {
+            templateUrl: 'views/home.html',
+            controller: 'homeCtrl'
+        }).otherwise({
+            redirectTo: "/"
+        });
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
+    
+    })
