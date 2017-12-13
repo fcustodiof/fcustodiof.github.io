@@ -9,6 +9,14 @@ main {
   flex: 1 0 auto;
 }
 
+.padding{
+  padding: 5%;
+}
+
+.margin-0{
+  margin: 0px!important;
+}
+
 /* header, main, footer {
   padding-left: 300px;
 }
@@ -37,9 +45,11 @@ p {
   background-color: #016EF0;
 }
 .tabs .tab, .tabs .tab a.active {
-  background-color: transparent;
+  /* background-color: transparent; */
   color: #016EF0;
 }
+
+
 
 .parallax-container {
   min-height: 380px;
