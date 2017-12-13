@@ -1,5 +1,8 @@
 angular.module('home',[])
 
 .controller('homeCtrl', function($scope){
-    $('.parallax').parallax();
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+        $('.parallax').parallax();
+    });
 })

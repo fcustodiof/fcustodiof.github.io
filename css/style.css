@@ -9,7 +9,7 @@ main {
   flex: 1 0 auto;
 }
 
-header, main, footer {
+/* header, main, footer {
   padding-left: 300px;
 }
 
@@ -17,9 +17,9 @@ header, main, footer {
   header, main, footer {
     padding-left: 0;
   }
-}
+} */
 
-.side-nav .user-view .circle, .side-nav .userView .circle {
+/* .side-nav .user-view .circle, .side-nav .userView .circle {
   height: 150px;
   width: 150px;
 }
@@ -27,10 +27,18 @@ header, main, footer {
 nav ul a,
 nav .brand-logo {
   color: #444;
-}
+} */
 
 p {
   line-height: 2rem;
+}
+
+.tabs .indicator {
+  background-color: #016EF0;
+}
+.tabs .tab, .tabs .tab a.active {
+  background-color: transparent;
+  color: #016EF0;
 }
 
 .parallax-container {
@@ -70,6 +78,10 @@ footer.page-footer {
   margin: 0;
 }
 
+.color-my-icon{
+  background-color: #016EF0;
+}
+
 .img-back{
     -webkit-filter: blur(5px); /* Safari */
     filter: blur(5px);
@@ -79,4 +91,12 @@ footer.page-footer {
 
 .cor-texto{
   color: #343434;
+}
+
+.side-nav{
+  overflow: hidden!important;
+}
+
+.text-justify{
+  text-align: justify;
 }
