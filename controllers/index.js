@@ -1,4 +1,5 @@
-angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
+angular.module('index',[ 'ngRoute', 'home'])
+// angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
 
 .controller('indexController', function($location, $scope, $window){
     $(".button-collapse").sideNav();
