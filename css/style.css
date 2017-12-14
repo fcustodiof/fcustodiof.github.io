@@ -13,49 +13,53 @@ main {
   padding: 5%;
 }
 
+.padding-1{
+  padding: 1%!important;
+}
+.padding-2{
+  padding: 2%!important;
+}
+.padding-3{
+  padding: 3%!important;
+}
+.padding-4{
+  padding: 4%!important;
+}
+.padding-5{
+  padding: 5%!important;
+}
+
 .margin-0{
   margin: 0px!important;
 }
 
-/* header, main, footer {
-  padding-left: 300px;
+.tabs .tab a {
+  color: rgba(1, 110, 240,0.5);
 }
 
-@media only screen and (max-width : 992px) {
-  header, main, footer {
-    padding-left: 0;
-  }
-} */
-
-/* .side-nav .user-view .circle, .side-nav .userView .circle {
-  height: 150px;
-  width: 150px;
-}
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
-} */
-
-p {
-  line-height: 2rem;
+.img-text{
+  opacity: 0.6;
+  background-color: #000;
+  color: white;
+  margin-top: 1%;
 }
 
 .tabs .indicator {
   background-color: #016EF0;
 }
-.tabs .tab, .tabs .tab a.active {
-  /* background-color: transparent; */
-  color: #016EF0;
+.tabs .active {
+  color: #016EF0!important;
 }
 
-
+.tabs{
+  margin-bottom: 2%;
+}
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: #343434;
+  /* color: #343434; */
 }
   .parallax-container .section {
     width: 100%;
@@ -77,21 +81,6 @@ p {
   }
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-.color-my-icon{
-  background-color: #016EF0;
-}
-
 .img-back{
     -webkit-filter: blur(5px); /* Safari */
     filter: blur(5px);
@@ -103,10 +92,26 @@ footer.page-footer {
   color: #343434;
 }
 
-.side-nav{
-  overflow: hidden!important;
-}
-
 .text-justify{
   text-align: justify;
+}
+
+.card:hover, .card:active, .card:focus{
+  -moz-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  -webkit-transition: transform 0.25s ease-in-out;
+  -moz-transition:transform 0.25s ease-in-out;
+  -ms-transition:transform 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
+                      0 3px 14px 2px rgba(0,0,0,0.12), 
+                      0 5px 5px -3px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
+              0 3px 14px 2px rgba(0,0,0,0.12), 
+              0 5px 5px -3px rgba(0,0,0,0.3);
 }
