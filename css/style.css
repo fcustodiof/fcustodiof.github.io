@@ -8,6 +8,9 @@ body {
 main {
   flex: 1 0 auto;
 }
+.margin-top-15{
+  margin-top: 15%;
+}
 .progress {
   background-color: rgba(1, 110, 240,0.3);
 }
@@ -162,6 +165,11 @@ main {
   /* margin-left: 24%; */
   /* background-size: 100px 82px; */
 }
+
+.foto-redonda{
+  border-radius: 100%;
+}
+
 timeline-panel {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
                       0 1px 5px 0 rgba(0,0,0,0.12), 
