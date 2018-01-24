@@ -27,16 +27,18 @@ O CPF deve ser válido; -->
                     <label for="data">Data de nascimento</label>
                     <input type="date" id="data">
                 </div>
-                <div class=" col s12 m6 l6">
+                <div class="input-field col s12 m6 l6">
                     <label for="rg">RG</label>
                     <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="rg">
                 </div>
-                <div class="col s12 m6 l6">
+                <div class="input-field col s12 m6 l6">
                     <label for="cpf">CPF</label>
                     <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cpf">
                 </div>
             </div>
-            <div class="row margin-top-1">
+            <br>
+            <br>
+            <div class="row">
                 <div class="col s12 m4 l4">
                     <label for="estado">Estado</label>
                     <select id="estado" ng-model="estado" ng-change="getIndexEstado()" material-select watch>
@@ -54,6 +56,8 @@ O CPF deve ser válido; -->
                     <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep">
                 </div>
             </div>
+            <br>
+            <br>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
                     <input id="email" type="email" class="validate">
