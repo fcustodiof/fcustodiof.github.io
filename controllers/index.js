@@ -1,4 +1,4 @@
-angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', 'inscrever', '$request'])
+angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', 'editarPerfil', 'inscrever', 'perfil', '$request'])
 // angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
 
 .controller('indexController', function($location, $scope, $window){
@@ -19,6 +19,9 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', 'inscrever', '$req
     }).when('/perfil', {
         templateUrl: 'views/perfil.html',
         controller: 'perfilCtrl'
+    }).when('/editar-perfil', {
+        templateUrl: 'views/editar-perfil.html',
+        controller: 'editarPerfilCtrl'
     }).otherwise({
         redirectTo: "/"
     });
