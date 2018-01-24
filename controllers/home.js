@@ -8,4 +8,5 @@ angular.module('home',[])
     $scope.inscrever = function(){
         $location.path('/inscrever');
     };
+    
 })

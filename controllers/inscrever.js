@@ -1,14 +1,29 @@
 angular.module('inscrever',[])
 
-.controller('inscreverCtrl', function($scope){
+.controller('inscreverCtrl', function($scope, $request){
     $(document).ready(function(){
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Today',
-            clear: 'Clear',
-            close: 'Ok',
-            closeOnSelect: false // Close upon selecting a date,
-        });
+        $('select').material_select();
     });
+    $scope.estados = [];
+    $scope.estado = "";
+    $scope.cidades = [];
+    $scope.cidade = "";
+    $scope.cidades = [];
+    $scope.getIndexEstado = function(){
+        angular.forEach($scope.estados, function(estado, key) {
+            if(estado.sigla == $scope.estado){
+                $scope.cidades = $scope.estados[key].cidades;
+            }
+        });
+        console.log($scope.cidades);
+    };
+
+    $request.getEstadosCidades()
+	    .then(function(response) {
+            console.log(response);
+	      	$scope.estados = response;
+	    }, function(error) {
+	       	console.log("erro de requisicao", error);
+		}
+	);
 })
