@@ -13,18 +13,14 @@ angular.module('$request', [])
         );
 	}
 	
-	this.findAllPainelBySubculturaId = function(idSubcultura){
-		return $http.get('/navegacaoController/findAllPainelBySubculturaId/' + idSubcultura)
+	this.cadastrar = function(usuario){
+		return $http.get('url', usuario)
 		.then(function(response) {
-			if (typeof response.data === 'object') {
-				return response.data;
-			} else {
-				// invalid response
-				return $q.reject(response.data);
-			}
+			console.log(response);
+			//deu certo
 		}, function(response) {
-			// something went wrong
-			return $q.reject(response.data);
+			console.log(response);
+			// algo de errado
 		});
     }
 }])

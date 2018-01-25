@@ -9,11 +9,11 @@ O CPF deve ser válido; -->
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="nome" type="text" class="validate">
+                    <input id="nome" ng-model="usuario.nome" type="text" class="validate">
                     <label for="nome">Nome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <select>
+                    <select ng-model="usuario.sexo">
                         <option value="" disabled selected>Selecione sua opção</option>
                         <option value="F">Feminino</option>
                         <option value="M">Masculino</option>
@@ -25,15 +25,15 @@ O CPF deve ser válido; -->
             <div class="row">
                 <div class=" col s12 m6 l6">
                     <label for="data">Data de nascimento</label>
-                    <input type="date" id="data">
+                    <input id="data" ng-model="usuario.nascimento" type="text" class="datepicker">
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <label for="rg">RG</label>
-                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="rg">
+                    <input ng-model="usuario.rg" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="rg">
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <label for="cpf">CPF</label>
-                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cpf">
+                    <input ng-model="usuario.cpf" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cpf">
                 </div>
             </div>
             <br>
@@ -41,42 +41,42 @@ O CPF deve ser válido; -->
             <div class="row">
                 <div class="col s12 m4 l4">
                     <label for="estado">Estado</label>
-                    <select id="estado" ng-model="estado" ng-change="getIndexEstado()" material-select watch>
+                    <select id="estado" ng-model="usuario.estado" ng-change="getIndexEstado()" material-select watch>
                         <option ng-repeat="estado in estados">{{estado.sigla}}</option>
                     </select>
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cidade">Cidade</label>
-                    <select id="cidade" ng-model="cidade" material-select watch>
+                    <select id="cidade" ng-model="usuario.cidade" material-select watch>
                         <option ng-repeat="cidade in cidades">{{cidade}}</option>
                     </select>
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cep">CEP</label>
-                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep">
+                    <input ng-model="usuario.cep" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep">
                 </div>
             </div>
             <br>
             <br>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="email" type="email" class="validate">
+                    <input ng-model="usuario.email" id="email" type="email" class="validate">
                     <label for="email">E-mail</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="senha" type="password" class="validate">
+                    <input id="senha" ng-model="usuario.senha" type="password" class="validate">
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="senha" type="password" class="validate">
-                    <label for="senha">Confirmar Senha</label>
+                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" class="validate">
+                    <label for="confirmarSenha">Confirmar Senha</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center">
-                    <button class="btn" ng-click="enviarForm()">Submit</button>
+                    <button class="btn" ng-click="enviarForm()">Cadastrar</button>
                 </div>
             </div>
         </form>
