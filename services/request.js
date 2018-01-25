@@ -13,7 +13,8 @@ angular.module('$request', [])
         );
 	}
 	
-	this.cadastrar = function(usuario){
+	this.Cadastrar = function(usuario){
+		console.log(usuario);
 		return $http.get('url', usuario)
 		.then(function(response) {
 			console.log(response);

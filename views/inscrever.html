@@ -6,10 +6,10 @@ O e-mail deve ser usado como login;
 O CPF deve ser válido; -->
 <div class="container margin-top-5">
     <div class="row">
-        <form class="col s12">
+        <form name="cadastro" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="nome" ng-model="usuario.nome" type="text" class="validate">
+                    <input id="nome" ng-model="usuario.nome" type="text" class="validate" required>
                     <label for="nome">Nome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
@@ -25,15 +25,16 @@ O CPF deve ser válido; -->
             <div class="row">
                 <div class=" col s12 m6 l6">
                     <label for="data">Data de nascimento</label>
-                    <input id="data" ng-model="usuario.nascimento" type="text" class="datepicker">
+                    <input input-date type="text" name="created" ng-model="usuario.nascimento" />
+                    <!-- <input id="data" ng-model="usuario.nascimento" type="text" class="datepicker"> -->
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <label for="rg">RG</label>
-                    <input ng-model="usuario.rg" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="rg">
+                    <input ng-model="usuario.rg" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="rg" required>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <label for="cpf">CPF</label>
-                    <input ng-model="usuario.cpf" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cpf">
+                    <label for="cpf">CPF (somente os numeros)</label>
+                    <input ng-model="usuario.cpf" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cpf" required>
                 </div>
             </div>
             <br>
@@ -53,30 +54,30 @@ O CPF deve ser válido; -->
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cep">CEP</label>
-                    <input ng-model="usuario.cep" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep">
+                    <input ng-model="usuario.cep" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep" required>
                 </div>
             </div>
             <br>
             <br>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input ng-model="usuario.email" id="email" type="email" class="validate">
+                    <input ng-model="usuario.email" id="email" type="email" class="validate" required>
                     <label for="email">E-mail</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="senha" ng-model="usuario.senha" type="password" class="validate">
+                    <input id="senha" ng-model="usuario.senha" type="password" class="validate" required>
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" class="validate">
+                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" class="validate" required>
                     <label for="confirmarSenha">Confirmar Senha</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center">
-                    <button class="btn" ng-click="enviarForm()">Cadastrar</button>
+                    <button ng-disabled="cadastro.$invalid" class="btn" ng-click="enviarForm()">Cadastrar</button>
                 </div>
             </div>
         </form>

@@ -6,18 +6,18 @@ angular.module('inscrever',[])
     });
     $scope.estados = [];
     $scope.cidades = [];
-    $scope.confirmarSenha = '';
+    $scope.confirmarSenha = '12';
     $scope.usuario = {
-        nome:'',
-        email: '',
-        sexo: '',
-        senha: '',
-        cpf: '',
-        rg: '',
-        cidade: '',
-        cep: '',
-        estado: '',
-        nascimento: ''
+        nome:"Felipe",
+        email: "f@email",
+        sexo: "",
+        senha: "12",
+        cpf: "",
+        rg: '12',
+        cidade: "",
+        cep: "12",
+        estado: "",
+        nascimento: null
     };
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -38,16 +38,32 @@ angular.module('inscrever',[])
 
     $scope.enviarForm = function(){
         if(TestaCPF($scope.usuario.cpf.toString()) == true){
-            if($scope.confirmarSenha == $scope.usuario.senha){
-                $request.Cadastrar($scope.usuario)
-                    .then(function(response) {
-                        console.log(response);
-                    }, function(error) {
-                        console.log("erro de requisicao", error);
-                    }
-                );
-            }
-            else{
+            if($scope.confirmarSenha === $scope.usuario.senha){
+                // if($scope.usuario.estado !== ""){
+                //     if($scope.usuario.cidade !== ""){
+                //         if($scope.usuario.sexo !== ""){
+                //             if($scope.usuario.nascimento !== ""){
+                                $request.Cadastrar($scope.usuario)
+                                    .then(function(response) {
+                                        console.log(response);
+                                    }, function(error) {
+                                        console.log("erro de requisicao", error);
+                                    }
+                                );
+            //                 }else{
+            //                     console.log($scope.usuario.nascimento);
+            //                     Materialize.toast('Selecione sua data de nascimento', 4000, 'red');
+            //                 }
+            //             }else{
+            //                 Materialize.toast('Selecione seu sexo', 4000, 'red');
+            //             }
+            //         }else{
+            //             Materialize.toast('Selecione sua cidade', 4000, 'red');
+            //         }
+            //     }else{
+            //         Materialize.toast('Selecione o seu estado', 4000, 'red');
+            //     }  
+            }else{
                 Materialize.toast('As senhas dos campos senha e confirmar senha são diferentes', 4000, 'red');
             }
         }else{
