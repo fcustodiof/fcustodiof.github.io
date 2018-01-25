@@ -7,17 +7,18 @@ angular.module('inscrever',[])
     $scope.estados = [];
     $scope.cidades = [];
     $scope.confirmarSenha = '12';
+    $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
         nome:"Felipe",
         email: "f@email",
         sexo: "",
         senha: "12",
-        cpf: "",
+        cpf: 12765510610,
         rg: '12',
         cidade: "",
-        cep: "12",
+        cep: "1111",
         estado: "",
-        nascimento: null
+        nascimento: ""
     };
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -35,14 +36,15 @@ angular.module('inscrever',[])
             }
         });
     };
-
+    
     $scope.enviarForm = function(){
         if(TestaCPF($scope.usuario.cpf.toString()) == true){
             if($scope.confirmarSenha === $scope.usuario.senha){
-                // if($scope.usuario.estado !== ""){
-                //     if($scope.usuario.cidade !== ""){
-                //         if($scope.usuario.sexo !== ""){
-                //             if($scope.usuario.nascimento !== ""){
+                if($scope.usuario.estado !== ""){
+                    if($scope.usuario.cidade !== ""){
+                        if($scope.usuario.sexo !== ""){
+                            if($('.datepicker').val() !== ""){
+                                $scope.usuario.nascimento = $('.datepicker').val();
                                 $request.Cadastrar($scope.usuario)
                                     .then(function(response) {
                                         console.log(response);
@@ -50,19 +52,19 @@ angular.module('inscrever',[])
                                         console.log("erro de requisicao", error);
                                     }
                                 );
-            //                 }else{
-            //                     console.log($scope.usuario.nascimento);
-            //                     Materialize.toast('Selecione sua data de nascimento', 4000, 'red');
-            //                 }
-            //             }else{
-            //                 Materialize.toast('Selecione seu sexo', 4000, 'red');
-            //             }
-            //         }else{
-            //             Materialize.toast('Selecione sua cidade', 4000, 'red');
-            //         }
-            //     }else{
-            //         Materialize.toast('Selecione o seu estado', 4000, 'red');
-            //     }  
+                            }else{
+                                console.log($('.datepicker').val());
+                                Materialize.toast('Selecione sua data de nascimento', 4000, 'red');
+                            }
+                        }else{
+                            Materialize.toast('Selecione seu sexo', 4000, 'red');
+                        }
+                    }else{
+                        Materialize.toast('Selecione sua cidade', 4000, 'red');
+                    }
+                }else{
+                    Materialize.toast('Selecione o seu estado', 4000, 'red');
+                }  
             }else{
                 Materialize.toast('As senhas dos campos senha e confirmar senha são diferentes', 4000, 'red');
             }

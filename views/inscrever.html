@@ -14,10 +14,7 @@ O CPF deve ser válido; -->
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <select ng-model="usuario.sexo">
-                        <option value="" disabled selected>Selecione sua opção</option>
-                        <option value="F">Feminino</option>
-                        <option value="M">Masculino</option>
-                        <option value="O">Outro</option>
+                        <option ng-repeat="sexo in sexos" value="{{sexo.sigla}}">{{sexo.nome}}</option>
                     </select>
                     <label>Sexo</label>
                 </div>
@@ -25,8 +22,8 @@ O CPF deve ser válido; -->
             <div class="row">
                 <div class=" col s12 m6 l6">
                     <label for="data">Data de nascimento</label>
-                    <input input-date type="text" name="created" ng-model="usuario.nascimento" />
-                    <!-- <input id="data" ng-model="usuario.nascimento" type="text" class="datepicker"> -->
+                    <!-- <input  type="text" name="created" ng-model="usuario.nascimento" /> -->
+                    <input id="data" ng-model="usuario.nascimento" type="text" class="datepicker">
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <label for="rg">RG</label>
