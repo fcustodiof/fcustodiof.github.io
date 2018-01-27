@@ -1,9 +1,10 @@
 angular.module('inscrever',[])
 
-.controller('inscreverCtrl', function($scope, $request){
+.controller('inscreverCtrl', function($scope, $request,$helper){
     $(document).ready(function(){
         $('select').material_select();
     });
+    console.log($helper.getFrom());
     $scope.estados = [];
     $scope.cidades = [];
     $scope.confirmarSenha = '12';
