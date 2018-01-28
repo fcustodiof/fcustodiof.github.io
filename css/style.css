@@ -112,3 +112,16 @@ footer.page-footer {
 .text-justify{
   text-align: justify;
 }
+.circle-img{
+  border-radius: 100%;
+}
+
+.card-rounded{
+  padding: 15% 3% 3% 3%;
+  border-radius: 100%;
+  border: 5px solid #fbc02d;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  position: relative;
+}
