@@ -1,7 +1,3 @@
-footer.page-footer {
-  margin: 0;
-}
-
 .margin-top-1{
   margin-top: 1%;
 }
@@ -43,24 +39,11 @@ nav{
   top: 0;
 }
 
-#home {
-  width: 100%;
-  background-image: url(../imgs/img1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-.center-logo {
+.elements-container{
   position: absolute;
-  top: 33%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-}
-
-.home {
-  height: auto;
-  min-height: 100vh;
-  /* padding-top: 70px; */
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }

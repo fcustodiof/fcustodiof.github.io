@@ -1,6 +1,67 @@
-<section class="capa">
-        <!-- <img src="./imgs/img1.png" alt=""> -->
-        
-</section>
+<nav class="yellow darken-1 sticky " role="navigation">
+  <ul id="slide-out" class="side-nav">
+      <li><a class="text-50">Sobre</a></li>
+      <li><a class="text-50">Palestrantes</a></li>
+      <li><a class="text-50">Organizadores</a></li>
+      <li><a class="text-50">Patrocinadores</a></li>
+      <li><a class="text-50">Local</a></li>
+      <li><a href="#" class="text-50">Login</a></li>
+      <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+          <li>
+              <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                  <li><a href="#!">First</a></li>
+                  <li><a href="#!">Second</a></li>
+                  <li><a href="#!">Third</a></li>
+                  <li><a href="#!">Fourth</a></li>
+              </ul>
+              </div>
+          </li>
+          </ul>
+      </li>
+  </ul>
+  <ul class="right hide-on-med-and-down">
+      <li><a class="text-50" href="sass.html">Sobre</a></li>
+      <li><a class="text-50" href="badges.html">Palestrantes</a></li>
+      <li><a class="text-50" href="collapsible.html">Organizadores</a></li>
+      <li><a class="text-50" href="collapsible.html">Patrocinadores</a></li>
+      <li><a class="text-50" href="collapsible.html">Local</a></li>
+      <li><a href="#" class="text-50">Login</a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+      <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">First</a></li>
+          <li><a href="#!">Second</a></li>
+          <li><a href="#!">Third</a></li>
+          <li><a href="#!">Fourth</a></li>
+      </ul>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+</nav>
+<main ng-view>
+
+</main>
+<div id="ModalLogin" class="modal">
+  <div class="modal-content">
+    <h4>Login</h4>
+    <label>E-mail: </label>
+    <input ng-model="usuario.email" type="email" id="email" required>
+    <label>Senha: </label>
+    <input ng-model= "usuario.senha" type="password" id="senha" required>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" ng-click = "Login()">Login</button>
+    <button class="btn modal-close">Cancelar</button>
+  </div>
+</div>
+
+<footer class="page-footer white">
+  <div class="footer-copyright">
+    <div class="container black-text">
+      © 2018
+    </div>
+  </div>
+</footer>
 
 

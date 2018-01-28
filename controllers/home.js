@@ -15,7 +15,6 @@ angular.module('home',[])
     $scope.editarPerfil = function(){
     	$location.path('/editarPerfil');
     };
-<<<<<<< HEAD
     var $doc = $('html, body');
     $('.scrollSuave').click(function() {
         $doc.animate({
@@ -23,6 +22,4 @@ angular.module('home',[])
         }, 500);
         return false;
     });
-=======
->>>>>>> 961775b93da8c727068ba46886f3ce9589d3fa90
 })
