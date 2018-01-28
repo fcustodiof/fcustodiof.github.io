@@ -26,6 +26,15 @@
   font-family: Aquatico;
   src: url(./fonts/Aquatico-Regular.otf);
 }
+
+@font-face {
+  font-family: Moon;
+  src: url(./fonts/Moon2.0-Regular.otf);
+}
+.texto-moon{
+  font-family: Moon;
+}
+
 .texto-Aquatico{
   font-family: Aquatico;
 }
@@ -70,7 +79,7 @@ main {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  /* color: white; */
 }
   .parallax-container .section {
     width: 100%;
@@ -91,8 +100,15 @@ main {
     top: 0;
   }
 }
-
 footer.page-footer {
   margin: 0;
 }
 
+.card-text-paralax{
+  background: white;
+  opacity: 0.6;
+  margin-top: 7%;
+}
+.text-justify{
+  text-align: justify;
+}
