@@ -1,47 +1,86 @@
-<nav class="yellow darken-1 sticky " role="navigation">
-  <ul id="slide-out" class="side-nav">
-      <li><a class="text-50">Sobre</a></li>
-      <li><a class="text-50">Palestrantes</a></li>
-      <li><a class="text-50">Organizadores</a></li>
-      <li><a class="text-50">Patrocinadores</a></li>
-      <li><a class="text-50">Local</a></li>
-      <li><a href="#" class="text-50">Login</a></li>
-      <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-          <li>
-              <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-              <div class="collapsible-body">
-              <ul>
-                  <li><a href="#!">First</a></li>
-                  <li><a href="#!">Second</a></li>
-                  <li><a href="#!">Third</a></li>
-                  <li><a href="#!">Fourth</a></li>
-              </ul>
-              </div>
-          </li>
-          </ul>
-      </li>
-  </ul>
-  <ul class="right hide-on-med-and-down">
-      <li><a class="text-50" href="sass.html">Sobre</a></li>
-      <li><a class="text-50" href="badges.html">Palestrantes</a></li>
-      <li><a class="text-50" href="collapsible.html">Organizadores</a></li>
-      <li><a class="text-50" href="collapsible.html">Patrocinadores</a></li>
-      <li><a class="text-50" href="collapsible.html">Local</a></li>
-      <li><a href="#" class="text-50">Login</a></li>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-      <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!">First</a></li>
-          <li><a href="#!">Second</a></li>
-          <li><a href="#!">Third</a></li>
-          <li><a href="#!">Fourth</a></li>
-      </ul>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-</nav>
-<main ng-view>
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="index" ng-controller="indexController">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Saara Ice</title>
 
-</main>
+    <!-- CSS  -->
+    <link rel='icon' type='image/png' href='images/favicon.png' />
+    <link rel="stylesheet" href="../css/fonts/material-icons/material-icons.css">
+    <link href="../css/util/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
+  <body>
+      <nav class="yellow darken-1 sticky " role="navigation">
+        <ul id="slide-out" class="side-nav">
+            <li><a class="text-50">Sobre</a></li>
+            <li><a class="text-50">Palestrantes</a></li>
+            <li><a class="text-50">Organizadores</a></li>
+            <li><a class="text-50">Patrocinadores</a></li>
+            <li><a class="text-50">Local</a></li>
+            <li><a href="#" class="text-50">Login</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#!">First</a></li>
+                        <li><a href="#!">Second</a></li>
+                        <li><a href="#!">Third</a></li>
+                        <li><a href="#!">Fourth</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="text-50" href="sass.html">Sobre</a></li>
+            <li><a class="text-50" href="badges.html">Palestrantes</a></li>
+            <li><a class="text-50" href="collapsible.html">Organizadores</a></li>
+            <li><a class="text-50" href="collapsible.html">Patrocinadores</a></li>
+            <li><a class="text-50" href="collapsible.html">Local</a></li>
+            <li><a href="#" class="text-50">Login</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">First</a></li>
+                <li><a href="#!">Second</a></li>
+                <li><a href="#!">Third</a></li>
+                <li><a href="#!">Fourth</a></li>
+            </ul>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      </nav> 
+    <main ng-view>
+
+    </main>
+    <footer class="page-footer white">
+      <div class="footer-copyright">
+        <div class="container black-text">
+          © 2018
+        </div>
+      </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-cookies.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/angular-materialize.min.js"></script>
+    <!-- <script src="js/angular-ui-router.min.js"></script> -->
+    <!-- controllers -->
+    <script src="../controllers/index.js"></script>
+    <script src="../controllers/inscrever.js"></script>
+    <script src="../controllers/home.js"></script>
+    <script src="../controllers/perfil.js"></script>
+    <script src="../controllers/conteudo-home.js"></script>
+    <script src="../services/request.js"></script>
+    <script src="../services/helper.js"></script>
+  </body>
+</html>
 <div id="ModalLogin" class="modal">
   <div class="modal-content">
     <h4>Login</h4>
@@ -56,12 +95,6 @@
   </div>
 </div>
 
-<footer class="page-footer white">
-  <div class="footer-copyright">
-    <div class="container black-text">
-      © 2018
-    </div>
-  </div>
-</footer>
+
 
 

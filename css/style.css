@@ -39,6 +39,16 @@ nav{
   top: 0;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 .elements-container{
   position: absolute;
   z-index: 1000;

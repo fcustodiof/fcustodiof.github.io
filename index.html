@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="index" ng-controller="indexController">
+<html lang="pt-BR">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -13,64 +13,54 @@
     <link href="css/util/normalize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
-  <body class="demo-1" ng-controller="indexController">  
-    <div class="container">
-      <div class="wrap">
-        <div class="background">
-          <canvas class="background__canvas"></canvas>
-          <canvas class="background__title background__title--big"></canvas>
-          <canvas class="background__title background__title--medium" data-breakpoint="1000"></canvas>
-          <canvas class="background__title background__title--small" data-breakpoint="600"></canvas>
+  <body class="demo-1"> 
+    <div>
+      <div class="container">
+        <div class="wrap">
+          <div class="background">
+            <canvas class="background__canvas"></canvas>
+            <canvas class="background__title background__title--big"></canvas>
+            <canvas class="background__title background__title--medium" data-breakpoint="1000"></canvas>
+            <canvas class="background__title background__title--small" data-breakpoint="600"></canvas>
+          </div>
         </div>
-      </div>
-      <div class="elements-container">
-        <div class="container">
-          <br>
-          <div class="row">
-            <div class="col s12">
-              <button class="btn right">Login</button>
+        <div class="elements-container">
+          <div class="container">
+            <br>
+            <div class="row">
+              <div class="col s12">
+                <button class="btn right">Login</button>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col s12 center">
+                <img src="img/logo.png" alt="">
+              </div>
             </div>
           </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           <br>
           <div class="row">
             <div class="col s12 center">
-              <img src="img/logo.png" alt="">
+              <button class="btn" onclick="goToHome()">Entrar</button>
             </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-          <div class="col s12 center">
-            <button class="btn">Entrar</button>
           </div>
         </div>
       </div>
     </div>
     <!--  Scripts-->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/init.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-cookies.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src="js/angular-materialize.min.js"></script>
     <script src="js/desert.js"></script>
-    <!-- <script src="js/angular-ui-router.min.js"></script> -->
-    <!-- controllers -->
-    <script src="controllers/index.js"></script>
-    <script src="controllers/inscrever.js"></script>
-    <script src="controllers/home.js"></script>
-    <script src="controllers/perfil.js"></script>
-    <script src="controllers/editar-perfil.js"></script>
-    <script src="services/request.js"></script>
-    <script src="services/helper.js"></script>
   </body>
 </html>

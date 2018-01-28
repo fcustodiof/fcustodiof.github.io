@@ -1,6 +1,6 @@
-angular.module('home',[])
+angular.module('conteudo-home',[])
 
-.controller('homeCtrl', function($scope, $location, $helper){
+.controller('conteudoHomeCtrl', function($scope, $location, $helper){
     $(document).ready(function(){
         $('.parallax').parallax();
         $('.modal').modal();
