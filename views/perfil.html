@@ -3,7 +3,49 @@ RG, e-mail, telefone, data de nascimento,
 endereço, cidade, CEP e Estado;
 O e-mail deve ser único no sistema;
 O e-mail deve ser usado como login;
-O CPF deve ser válido
-; -->
-<h1>perfil</h1>
-<button class="btn" ng-click="goToEditarPerfil()">Editar Perfil</button>
+O CPF deve ser válido; -->
+<div class="container margin-top-5">
+    <div class="row">
+        <div class="row">
+          	<h2>Informações Pessoais</h2>
+            <div class="input-field col s12 m6 l6">
+                <label for="nome">Nome</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <label>Sexo</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col s12 m6 l6">
+                <label for="data">Data de nascimento</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <label for="rg">RG</label>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="input-field col s12 m6 l6">
+                <label for="cpf">CPF </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <label for="estado">Estado</label>
+            </div>
+            <div class="col s12 m4 l4">
+                <label for="cidade">Cidade</label>
+            </div>
+            <div class="col s12 m4 l4">
+                <label for="cep">CEP</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <label for="email">E-mail</label>
+    		</div>
+        </div>
+    </div>
+    <div class = "row">
+    	<button class="btn" ng-click="goToEditarPerfil()">Editar Perfil</button>
+	</div>
+</div>

@@ -58,9 +58,31 @@
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </nav>
+<<<<<<< HEAD
     <section>
         <h1>Conheça Oasis</h1>
     </section> 
+=======
+
+  <!-- Modal Structure -->
+  <div id="ModalLogin" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <label>E-mail: </label>
+      <input ng-model="usuario.email" type="email" id="email" required>
+      <label>Senha: </label>
+      <input ng-model= "usuario.senha" type="password" id="senha" required>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" ng-click = "Login()">Login</button>
+      <button class="btn modal-close">Cancelar</button>
+    </div>
+  </div>
+
+    <main ng-view>
+        
+    </main>
+>>>>>>> 961775b93da8c727068ba46886f3ce9589d3fa90
     <footer class="page-footer white">
       <div class="footer-copyright">
         <div class="container black-text">
@@ -83,6 +105,6 @@
     <script src="controllers/perfil.js"></script>
     <script src="controllers/editar-perfil.js"></script>
     <script src="services/request.js"></script>
-  
+    <script src="services/helper.js"></script>
   </body>
 </html>

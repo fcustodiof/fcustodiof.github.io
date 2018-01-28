@@ -1,4 +1,4 @@
-angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', 'editarPerfil', 'inscrever', 'perfil', '$request'])
+angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', '$helper', 'editarPerfil', 'inscrever', 'perfil', '$request'])
 // angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
 
 .controller('indexController', function($location, $scope, $window){
@@ -6,6 +6,9 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', 'editarPerfil', 'i
     $scope.goToPerfil = function(){
         $location.path('/perfil');
     };
+     $(document).ready(function(){
+        $('.modal').modal();
+    });
 })
 
 .config(function($routeProvider, $locationProvider) {
