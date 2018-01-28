@@ -23,6 +23,14 @@
 }
 
 @font-face {
+  font-family: Aquatico;
+  src: url(./fonts/Aquatico-Regular.otf);
+}
+.texto-Aquatico{
+  font-family: Aquatico;
+}
+
+@font-face {
   font-family: BebasNeue;
   src: url(./fonts/BebasNeue.otf);
 }
@@ -87,3 +95,4 @@ main {
 footer.page-footer {
   margin: 0;
 }
+
