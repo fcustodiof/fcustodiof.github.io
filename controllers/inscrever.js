@@ -1,6 +1,6 @@
 angular.module('inscrever',[])
 
-.controller('inscreverCtrl', function($scope, $request,$helper){
+.controller('inscreverCtrl', function($scope, $request, $helper, $location){
     $(document).ready(function(){
         $('select').material_select();
     });
@@ -10,14 +10,14 @@ angular.module('inscrever',[])
     $scope.confirmarSenha = '12';
     $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
-        nome:"Felipe",
-        email: "f@email",
+        nome:"",
+        email: "",
         sexo: "",
-        senha: "12",
-        cpf: 12765510610,
-        rg: '12',
+        senha: "",
+        cpf: '',
+        rg: '',
         cidade: "",
-        cep: "1111",
+        cep: "",
         estado: "",
         nascimento: ""
     };
@@ -37,7 +37,9 @@ angular.module('inscrever',[])
             }
         });
     };
-    
+    $scope.goToHome = function(){
+        $location.path('/');
+    };
     $scope.enviarForm = function(){
         if(TestaCPF($scope.usuario.cpf.toString()) == true){
             if($scope.confirmarSenha === $scope.usuario.senha){

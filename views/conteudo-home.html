@@ -1,3 +1,45 @@
+<nav class="yellow darken-2 sticky " role="navigation">
+    <ul id="slide-out" class="side-nav">
+        <li><a class="text-50 scrollSuave" href="#inicio">Sobre</a></li>
+        <li><a class="text-50 scrollSuave" href="#palestrantes">Palestrantes</a></li>
+        <li><a class="text-50 scrollSuave" href="#organizadores">Organizadores</a></li>
+        <li><a class="text-50 scrollSuave" href="#patrocinadores">Patrocinadores</a></li>
+        <li><a class="text-50 scrollSuave" href="#localizacao">Local</a></li>
+        <li><a href="#" class="text-50">Login</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                <ul>
+                    <li><a href="#!">First</a></li>
+                    <li><a href="#!">Second</a></li>
+                    <li><a href="#!">Third</a></li>
+                    <li><a href="#!">Fourth</a></li>
+                </ul>
+                </div>
+            </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+        <li><a class="text-50 scrollSuave" href="#inicio">Sobre</a></li>
+        <li><a class="text-50 scrollSuave" href="#palestrantes">Palestrantes</a></li>
+        <li><a class="text-50 scrollSuave" href="#organizadores">Organizadores</a></li>
+        <li><a class="text-50 scrollSuave" href="#patrocinadores">Patrocinadores</a></li>
+        <li><a class="text-50 scrollSuave" href="#localizacao">Local</a></li>
+        <li><a class="text-50" ng-click="inscrever()">Inscrever-se</a></li>
+        <li><a class="text-50 modal-trigger" data-target="ModalLogin">Login</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">First</a></li>
+            <li><a href="#!">Second</a></li>
+            <li><a href="#!">Third</a></li>
+            <li><a href="#!">Fourth</a></li>
+        </ul>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+</nav>
 <br>
 <br>
 <div class="container" id="inicio">
@@ -8,23 +50,23 @@
     <br>
     <div class="row">
         <div class="col s12 m6 l6">
-            <img src="./img/oasis.jpeg" width="100%" height="auto">
+            <img src="./img/oasis.jpeg" class="z-depth-4" width="100%" height="auto">
         </div>
         <div class="col s12 m6 l6">
-            <h4 class="text-justify texto-moon">
+            <h4 class="text-justify texto-BebasNeue">
                 Um festival que agitará mais de 9
                 milhões Km², criando o seu Oasis
-                á beira do Rio Nilo em pleno deserto
+                à beira do Rio Nilo em pleno deserto
                 do Saara.     
             </h4>
         </div>
     </div>
     <div class="row">
-        <div class="col s12 m6 l6 texto-moon">
-            <h4>- 3 dias da mais pura refrescancia</h4>
-            <h4>- 3 dias com os melhores sorvetes ja feito</h4>
+        <div class="col s12 m6 l6 texto-BebasNeue">
+            <h4>- 3 dias da mais pura refrescância</h4>
+            <h4>- 3 dias com os melhores sorvetes já feito</h4>
         </div>
-        <div class="col s12 m6 l6 texto-moon">
+        <div class="col s12 m6 l6 texto-BebasNeue">
             <h4>
                 - 3 dias com palestrantes e chefes que mudaram
                 a maneira de como se faz um verdadeiro
@@ -56,7 +98,7 @@
     <br><br>
     <div class="row">
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrante_1.jpg" alt="">
                     <br>
@@ -67,7 +109,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                     <img class = "circle-img-palestrante-opacity" src="./../img/palestrante_1.jpg" alt="">
                     <h4 class="grey-text text-darken-1 center-text-img">EXTRATO DE MORANGO 
@@ -76,7 +118,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrante_2.jpeg" alt="">
                     <br>
@@ -87,7 +129,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                     <img class = "circle-img-palestrante-opacity" src="./../img/palestrante_2.jpeg" alt="">
                     <h4 class="grey-text text-darken-1 center-text-img">Pioneira em sobremesas de
@@ -97,7 +139,7 @@
             </div>
         </div>    
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrante_3.jpeg" alt="">
                     <br>
@@ -107,7 +149,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                     <img class = "circle-img-palestrante-opacity" src="./../img/palestrante_3.jpeg" alt="">
                     <h4 class="grey-text text-darken-1 center-text-img">Cursos e Palestras com tema: melhoria na comunicação e em vendas</h4>
@@ -115,7 +157,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrante_4.jpeg" alt="">
                     <br>
@@ -127,7 +169,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                     <img class = "circle-img-palestrante-opacity" src="./../img/palestrante_4.jpeg" alt="">
                     <h4 class="grey-text text-darken-1 center-text-img">Rumo ao sucesso, conselhos de um
@@ -137,7 +179,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrante_5.jpeg" alt="">
                     <br>
@@ -148,7 +190,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                     <img class = "circle-img-palestrante-opacity" src="./../img/palestrante_5.jpeg" alt="">
                     <h4 class="grey-text text-darken-1 center-text-img">Um pouco mais sobre sucesso no
@@ -157,7 +199,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div>
                     <img class="circle-img-palestrante" src="./../img/palestrantes_6.jpg" alt="">
                     <br>
@@ -168,7 +210,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-palestrante">
+            <div class="card-palestrante z-depth-4">
                 <div class="relative">
                         <img class = "circle-img-palestrante-opacity" src="./../img/palestrantes_6.jpg" alt="">
                         <h4 class="grey-text text-darken-1 center-text-img">O sorvete que
@@ -219,29 +261,29 @@
     <br><br>
     <div class="row center-align">
         <div class="col s12 m4 l4">
-            <div class="card-rounded" style="padding: 20% 4% 4% 4%;">
+            <div class="card-rounded z-depth-4" style="padding: 20% 4% 4% 4%;">
                 <img src="../img/coca.png" width="100%" height="auto">
             </div>
         </div>
         <div class="col s12 m4 l4 ">
-            <div class="card-rounded" style="padding: 20% 4% 4% 4%;">
+            <div class="card-rounded z-depth-4" style="padding: 20% 4% 4% 4%;">
                 <img src="../img/kell.png" width="100%" height="auto">
             </div>
         </div>
         <div class="col s12 m4 l4 ">
-            <div class="card-rounded" style="padding: 8% 8% 8% 8%;"> 
+            <div class="card-rounded z-depth-4" style="padding: 8% 8% 8% 8%;"> 
                 <img src="../img/nestle.png" width="100%" height="auto">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col s12 offset-m2 offset-l2 m3 l3">
-            <div class="card-rounded" style="padding: 26% 4% 4% 4%;">
+            <div class="card-rounded z-depth-4" style="padding: 26% 4% 4% 4%;">
                 <img src="../img/pepsico.png" width="100%" height="auto">
             </div>
         </div>
         <div class="col s12 offset-m2 offset-l2 m3 l3">
-            <div class="card-rounded" style="padding: 5% 5% 5% 5%;">
+            <div class="card-rounded z-depth-4" style="padding: 5% 5% 5% 5%;">
                 <img src="../img/unilever.png" width="100%" height="auto">
             </div>
         </div>
@@ -283,5 +325,19 @@
                 que voce pode obter!
             </p>
         </div>
+    </div>
+</div>
+
+<div id="ModalLogin" class="modal">
+    <div class="modal-content">
+        <h4>Login</h4>
+        <label>E-mail: </label>
+        <input ng-model="usuario.email" type="email" id="email" required>
+        <label>Senha: </label>
+        <input ng-model= "usuario.senha" type="password" id="senha" required>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" ng-click = "Login()">Login</button>
+        <button class="btn modal-close">Cancelar</button>
     </div>
 </div>

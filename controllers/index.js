@@ -8,6 +8,10 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'home','$helper', 'inscrev
         $('.modal').modal();
     });
     var $doc = $('html, body');
+    $scope.inscrever = function(path){
+        $location.path('/inscrever');
+        $helper.setFrom(path);
+ };
 })
 
 .config(function($routeProvider, $locationProvider) {

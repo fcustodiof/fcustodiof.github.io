@@ -35,6 +35,7 @@
   font-family: Moon;
 }
 
+
 .texto-Aquatico{
   font-family: Aquatico;
 }
@@ -43,6 +44,11 @@
   font-family: BebasNeue;
   src: url(./fonts/BebasNeue.otf);
 }
+
+.texto-BebasNeue{
+  font-family: BebasNeue;
+}
+
 nav{
   font-family: BebasNeue;
   z-index: 9999;
