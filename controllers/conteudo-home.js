@@ -15,10 +15,11 @@ angular.module('conteudo-home',[])
     $scope.editarPerfil = function(){
     	$location.path('/editarPerfil');
     };
-    var $doc = $('html, body');
+
+    var $doc = $('html, body, main');
     $('.scrollSuave').click(function() {
-        $doc.animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
+        $window.animate({
+            scrollTop: $( $.attr(this, 'href')).offset().top
         }, 500);
         return false;
     });

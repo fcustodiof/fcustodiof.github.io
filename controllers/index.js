@@ -7,6 +7,7 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'home','$helper', 'inscrev
      $(document).ready(function(){
         $('.modal').modal();
     });
+    var $doc = $('html, body');
 })
 
 .config(function($routeProvider, $locationProvider) {
