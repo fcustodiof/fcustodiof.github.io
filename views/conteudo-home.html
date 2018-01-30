@@ -350,13 +350,13 @@
             <div class="row">
                 <div class="input-field col s12 l12 m12">
                     <label for="email">E-Mail</label>
-                    <input ng-model="usuario.email" id="email" type="email" required>
+                    <input ng-model="usuario.login" id="email" type="email" required>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 l12 m12">
                     <label for="password">Senha</label>
-                    <input ng-model="usuario.password" id="password" type="password" required>
+                    <input ng-model="usuario.senha" id="password" type="password" required>
                 </div>
             </div>
         </div>
@@ -364,7 +364,7 @@
             <div class="row">
                 <div class="col s12 center">
                     <button class="btn modal-close yellow darken-2 texto-Aquatico">Cancelar</button>
-                    <button class="btn brown waves-effect waves-light texto-Aquatico" ng-disabled="loginform.$invalid" ng-click="Login()">Login</button>
+                    <button class="btn brown waves-effect waves-light texto-Aquatico" ng-disabled="loginform.$invalid" ng-click="doLogin()">Login</button>
                 </div>
             </div>
         </div>

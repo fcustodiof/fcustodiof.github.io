@@ -50,7 +50,7 @@ angular.module('inscrever',[])
                             if($('.datepicker').val() !== ""){
                                 $scope.usuario.nascimento = $('.datepicker').val();
                                 $scope.usuario.senha = md5.createHash($scope.usuario.senha);
-                                $request.Cadastrar($scope.usuario)
+                                $request.cadastrar($scope.usuario)
                                     .then(function(response) {
                                         console.log(response);
                                     }, function(error) {
