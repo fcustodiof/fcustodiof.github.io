@@ -14,11 +14,11 @@
         <form name="cadastro" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="nome" ng-model="usuario.nome" type="text" class="validate" required>
+                    <input id="nome" ng-model="usuario.nome" type="text" required>
                     <label for="nome">Nome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="sobrenome" ng-model="usuario.sobrenome" type="text" class="validate" required>
+                    <input id="sobrenome" ng-model="usuario.sobrenome" type="text" required>
                     <label for="sobrenome">Sobrenome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cep">CEP</label>
-                    <input ng-model="usuario.cep" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep" required>
+                    <input ng-model="usuario.cep" type="number" id="cep" required>
                 </div>
             </div>
             <br>
@@ -75,11 +75,11 @@
             </div>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="senha" ng-model="usuario.senha" type="password" class="validate" required>
+                    <input id="senha" ng-model="usuario.senha" type="password" required>
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" class="validate" required>
+                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" required>
                     <label for="confirmarSenha">Confirmar Senha</label>
                 </div>
             </div>
