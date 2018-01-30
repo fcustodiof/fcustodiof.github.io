@@ -7,10 +7,11 @@ angular.module('inscrever',[])
     console.log($helper.getFrom());
     $scope.estados = [];
     $scope.cidades = [];
-    $scope.confirmarSenha = '12';
+    $scope.confirmarSenha = "";
     $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
         nome:"",
+        sobrenome: "",
         email: "",
         sexo: "",
         senha: "",

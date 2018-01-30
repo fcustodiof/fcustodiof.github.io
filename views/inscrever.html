@@ -18,6 +18,10 @@
                     <label for="nome">Nome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
+                    <input id="sobrenome" ng-model="usuario.sobrenome" type="text" class="validate" required>
+                    <label for="sobrenome">Sobrenome</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
                     <select ng-model="usuario.sexo">
                         <option ng-repeat="sexo in sexos" value="{{sexo.sigla}}">{{sexo.nome}}</option>
                     </select>
