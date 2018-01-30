@@ -1,6 +1,6 @@
 angular.module('inscrever',[])
 
-.controller('inscreverCtrl', function($scope, $request, $helper, $location){
+.controller('inscreverCtrl', function($scope, $request, $helper, $location, md5){
     $(document).ready(function(){
         $('select').material_select();
     });
@@ -49,6 +49,7 @@ angular.module('inscrever',[])
                         if($scope.usuario.sexo !== ""){
                             if($('.datepicker').val() !== ""){
                                 $scope.usuario.nascimento = $('.datepicker').val();
+                                $scope.usuario.senha = md5.createHash($scope.usuario.senha);
                                 $request.Cadastrar($scope.usuario)
                                     .then(function(response) {
                                         console.log(response);

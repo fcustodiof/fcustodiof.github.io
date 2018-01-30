@@ -1,5 +1,4 @@
-angular.module('index',[ 'ngRoute', 'ui.materialize', 'home','$helper', 'inscrever', '$request'])
-// angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
+angular.module('index',[ 'ngRoute', 'ui.materialize', 'angular-md5', 'login','home','$helper', 'inscrever', '$request'])
 
 .controller('indexController', function($location, $scope, $window){
     $(".button-collapse").sideNav();
@@ -11,7 +10,7 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'home','$helper', 'inscrev
     $scope.inscrever = function(path){
         $location.path('/inscrever');
         $helper.setFrom(path);
- };
+    };
 })
 
 .config(function($routeProvider, $locationProvider) {

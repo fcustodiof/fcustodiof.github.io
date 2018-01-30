@@ -56,7 +56,7 @@
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cidade">Cidade</label>
-                    <select id="cidade" ng-model="usuario.cidade" material-select watch>
+                    <select ng-disabled="usuario.estado == ''" id="cidade" ng-model="usuario.cidade" material-select watch>
                         <option ng-repeat="cidade in cidades">{{cidade}}</option>
                     </select>
                 </div>
@@ -85,7 +85,7 @@
             </div>
             <div class="row">
                 <div class="col s12 center">
-                    <button ng-disabled="cadastro.$invalid" class="btn" ng-click="enviarForm()">Cadastrar</button>
+                    <button ng-disabled="cadastro.$invalid" class="btn-large pink waves-effect waves-light accent-3 texto-Aquatico" ng-click="enviarForm()">Cadastrar</button>
                 </div>
             </div>
         </form>
