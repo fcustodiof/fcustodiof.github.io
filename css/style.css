@@ -143,13 +143,13 @@ footer.page-footer {
 
 .circle-img-palestrante{
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 .circle-img-palestrante-opacity{
   opacity: 0.2;
   vertical-align: middle;
-  margin-top: 44%;
+  margin-top: 30%;
   position: relative;
   width: 250px;
   height: 250px;
@@ -181,20 +181,19 @@ footer.page-footer {
 .card-palestrante{
   background-color: #fbc02d;
   border-radius: 20px;
-  padding: 10px;
+  padding: 2%;
   font-family : BebasNeue;
-  height: 516px;
-  width: 300px;
   margin: 10px auto; 
   position: relative;
+  text-align: center;
+  height: 498px;
 }
 .card-palestrante div{
   background-color: #f9d887;
   border: 8px solid white;
   border-radius: 20px;
-  padding: 10px;
-  text-align: center;
-  height: 496px;
-  width: 280px;
+  padding: 10% 2% 10% 2%;
+  height: 100%;
+  width: 100%;
 }
 
