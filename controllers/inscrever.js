@@ -3,6 +3,13 @@ angular.module('inscrever',[])
 .controller('inscreverCtrl', function($scope, $request, $helper, $location, md5){
     $(document).ready(function(){
         $('select').material_select();
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true, 
+          }
+        );
     });
     console.log($helper.getFrom());
     $scope.estados = [];
@@ -39,6 +46,7 @@ angular.module('inscrever',[])
         });
     };
     $scope.goToHome = function(){
+        $('.button-collapse').sideNav('hide');
         $location.path('/');
     };
     $scope.enviarForm = function(){

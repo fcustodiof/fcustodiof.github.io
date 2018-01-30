@@ -5,6 +5,7 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'angular-md5', 'login','ho
 
      $(document).ready(function(){
         $('.modal').modal();
+        $('.collapsible').collapsible();
     });
     var $doc = $('html, body');
     $scope.inscrever = function(path){

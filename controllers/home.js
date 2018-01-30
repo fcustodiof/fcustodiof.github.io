@@ -6,6 +6,7 @@ angular.module('home',[])
         $('.modal').modal();
         $(".button-collapse").sideNav();
         $('.dropdown-button').dropdown();
+        $('.collapsible').collapsible();
     });
     // alert("to na home");
     $scope.inscrever = function(path){
