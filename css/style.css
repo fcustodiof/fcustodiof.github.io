@@ -197,6 +197,10 @@ footer.page-footer {
   width: 100%;
 }
 
+nav ul a {
+  font-size: 2rem!important;
+}
+
 .modal-login{
   top: 30%!important;
   width: 27%!important;
