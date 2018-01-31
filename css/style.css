@@ -142,21 +142,16 @@ footer.page-footer {
 .circle-img{
   border-radius: 100%;
 }
-
+.texto-organizadores{
+  font-color : #210D18;
+}
 .circle-img-palestrante{
   border-radius: 100%;
   width: 150px;
   height: 150px;
 }
-.circle-img-palestrante-opacity{
-  opacity: 0.2;
-  vertical-align: middle;
-  margin-top: 30%;
-  position: relative;
-  height: 250px;
-  width: 250px;
-  border-radius: 100%;
-}
+
+
 .center-text-img{
   position: absolute;
   top: 47%;
@@ -204,7 +199,7 @@ nav ul a {
 }
 
 .modal-login{
-  top: 30%!important;
+  top: 20%!important;
   width: 27%!important;
   overflow: hidden;
 }
