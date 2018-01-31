@@ -1,23 +1,31 @@
 angular.module('inscrever',[])
 
-.controller('inscreverCtrl', function($scope, $request,$helper){
+.controller('inscreverCtrl', function($scope, $request, $helper, $location, md5){
     $(document).ready(function(){
         $('select').material_select();
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true, 
+          }
+        );
     });
     console.log($helper.getFrom());
     $scope.estados = [];
     $scope.cidades = [];
-    $scope.confirmarSenha = '12';
+    $scope.confirmarSenha = "";
     $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
-        nome:"Felipe",
-        email: "f@email",
+        nome:"",
+        sobrenome: "",
+        email: "",
         sexo: "",
-        senha: "12",
-        cpf: 12765510610,
-        rg: '12',
+        senha: "",
+        cpf: '',
+        rg: '',
         cidade: "",
-        cep: "1111",
+        cep: "",
         estado: "",
         nascimento: ""
     };
@@ -37,7 +45,10 @@ angular.module('inscrever',[])
             }
         });
     };
-    
+    $scope.goToHome = function(){
+        $('.button-collapse').sideNav('hide');
+        $location.path('/');
+    };
     $scope.enviarForm = function(){
         if(TestaCPF($scope.usuario.cpf.toString()) == true){
             if($scope.confirmarSenha === $scope.usuario.senha){
@@ -46,7 +57,8 @@ angular.module('inscrever',[])
                         if($scope.usuario.sexo !== ""){
                             if($('.datepicker').val() !== ""){
                                 $scope.usuario.nascimento = $('.datepicker').val();
-                                $request.Cadastrar($scope.usuario)
+                                $scope.usuario.senha = md5.createHash($scope.usuario.senha);
+                                $request.cadastrar($scope.usuario)
                                     .then(function(response) {
                                         console.log(response);
                                     }, function(error) {

@@ -1,26 +1,29 @@
-angular.module('index',[ 'ngRoute', 'ui.materialize', 'home', '$helper', 'editarPerfil', 'inscrever', 'perfil', '$request'])
-// angular.module('index',[ 'ngRoute', 'ngCookies', 'home'])
+angular.module('index',[ 'ngRoute', 'ui.materialize', 'angular-md5', 'login','home','$helper', 'inscrever', '$request'])
 
 .controller('indexController', function($location, $scope, $window){
     $(".button-collapse").sideNav();
-    $scope.goToPerfil = function(){
-        $location.path('/perfil');
-    };
+
      $(document).ready(function(){
         $('.modal').modal();
+        $('.collapsible').collapsible();
     });
+    var $doc = $('html, body');
+    $scope.inscrever = function(path){
+        $location.path('/inscrever');
+        $helper.setFrom(path);
+    };
 })
 
 .config(function($routeProvider, $locationProvider) {
     
     $routeProvider.when('/', {
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/conteudo-home.html',
         controller: 'homeCtrl'
     }).when('/inscrever', {
         templateUrl: 'views/inscrever.html',
         controller: 'inscreverCtrl'
-    }).when('/perfil', {
-        templateUrl: 'views/perfil.html',
+    }).when('/conteudo-home', {
+        templateUrl: 'views/conteudo-home.html',
         controller: 'perfilCtrl'
     }).when('/editar-perfil', {
         templateUrl: 'views/editar-perfil.html',

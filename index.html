@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="index" ng-controller="indexController">
+<html lang="pt-BR">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -9,65 +9,57 @@
     <link rel='icon' type='image/png' href='images/favicon.png' />
     <link rel="stylesheet" href="css/fonts/material-icons/material-icons.css">
     <link href="css/util/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/util/desert.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/util/normalize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
-  <body ng-controller="indexController">
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a class ="modal-trigger" data-target="ModalLogin">Login</a></li>
-          <li><a ng-click="goToPerfil()">Perfil</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Login</a></li>
-          <li><a ng-click="goToPerfil()">Perfil</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-
-  <!-- Modal Structure -->
-  <div id="ModalLogin" class="modal">
-    <div class="modal-content">
-      <h4>Login</h4>
-      <label>E-mail: </label>
-      <input ng-model="usuario.email" type="email" id="email" required>
-      <label>Senha: </label>
-      <input ng-model= "usuario.senha" type="password" id="senha" required>
-    </div>
-    <div class="modal-footer">
-      <button class="btn" ng-click = "Login()">Login</button>
-      <button class="btn modal-close">Cancelar</button>
-    </div>
-  </div>
-
-    <main ng-view>
-        
-    </main>
-    <footer class="page-footer white">
-      <div class="footer-copyright">
-        <div class="container black-text">
-          © 2018
+  <body class="demo-1 yellow darken-2"> 
+    <div>
+      <div class="container">
+        <div class="wrap hide-on-small-only">
+          <div class="background">
+            <canvas class="background__canvas"></canvas>
+            <canvas class="background__title background__title--big"></canvas>
+            <canvas class="background__title background__title--medium" data-breakpoint="1000"></canvas>
+            <canvas class="background__title background__title--small" data-breakpoint="600"></canvas>
+          </div>
+        </div>
+        <div class="elements-container">
+          <div class="container">
+            <br>
+            <br>
+            <div class="row">
+              <div class="col s12 center">
+                <h3 class="texto-Aquatico">Festival de sorvetes</h3>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col s12 center">
+                <img src="img/logo.png" height="200px" width="auto">
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col s12 center">
+              <button class="waves-effect btn-large pink accent-3 texto-Aquatico" onclick="goToHome()">Entrar</button>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col s12 center">
+              <img src="img/ice-cream.png" height="100px" width="auto">
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
     <!--  Scripts-->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/init.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-cookies.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src="js/angular-materialize.min.js"></script>
-    <!-- <script src="js/angular-ui-router.min.js"></script> -->
-    <!-- controllers -->
-    <script src="controllers/index.js"></script>
-    <script src="controllers/inscrever.js"></script>
-    <script src="controllers/home.js"></script>
-    <script src="controllers/perfil.js"></script>
-    <script src="controllers/editar-perfil.js"></script>
-    <script src="services/request.js"></script>
-    <script src="services/helper.js"></script>
+    <script src="js/desert.js"></script>
   </body>
 </html>

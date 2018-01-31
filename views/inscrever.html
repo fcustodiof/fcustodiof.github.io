@@ -1,16 +1,30 @@
-<!-- Nome,Sexo,CPF,
-RG, e-mail, telefone, data de nascimento, 
-endereço, cidade, CEP e Estado;
-O e-mail deve ser único no sistema;
-O e-mail deve ser usado como login;
-O CPF deve ser válido; -->
-<div class="container margin-top-5">
+<nav class="yellow darken-2 sticky" role="navigation">
+    <ul id="slide-out" class="side-nav">
+        <li><a class="text-50" ng-click="goToHome()">Início</a></li>
+    </ul>
+    <div class="container">
+        <ul class="left container hide-on-med-and-down">
+            <li><a class="text-50" ng-click="goToHome()">Início</a></li>
+        </ul>
+    </div>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+</nav>
+<div class="container margin-top-3">
+    <div class="row">
+        <div class="col s12 center">
+            <h4 class="texto-Aquatico">Cadastro</h4>
+        </div>
+    </div>
     <div class="row">
         <form name="cadastro" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="nome" ng-model="usuario.nome" type="text" class="validate" required>
+                    <input id="nome" ng-model="usuario.nome" type="text" required>
                     <label for="nome">Nome</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="sobrenome" ng-model="usuario.sobrenome" type="text" required>
+                    <label for="sobrenome">Sobrenome</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <select ng-model="usuario.sexo">
@@ -47,13 +61,13 @@ O CPF deve ser válido; -->
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cidade">Cidade</label>
-                    <select id="cidade" ng-model="usuario.cidade" material-select watch>
+                    <select ng-disabled="usuario.estado == ''" id="cidade" ng-model="usuario.cidade" material-select watch>
                         <option ng-repeat="cidade in cidades">{{cidade}}</option>
                     </select>
                 </div>
                 <div class="col s12 m4 l4">
                     <label for="cep">CEP</label>
-                    <input ng-model="usuario.cep" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="number" id="cep" required>
+                    <input ng-model="usuario.cep" type="number" id="cep" required>
                 </div>
             </div>
             <br>
@@ -66,17 +80,17 @@ O CPF deve ser válido; -->
             </div>
             <div class="row">
                 <div class="input-field col s12 m6 l6">
-                    <input id="senha" ng-model="usuario.senha" type="password" class="validate" required>
+                    <input id="senha" ng-model="usuario.senha" type="password" required>
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" class="validate" required>
+                    <input id="confirmarSenha" ng-model="confirmarSenha" type="password" required>
                     <label for="confirmarSenha">Confirmar Senha</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center">
-                    <button ng-disabled="cadastro.$invalid" class="btn" ng-click="enviarForm()">Cadastrar</button>
+                    <button ng-disabled="cadastro.$invalid" class="btn-large pink waves-effect waves-light accent-3 texto-Aquatico" ng-click="enviarForm()">Cadastrar</button>
                 </div>
             </div>
         </form>
