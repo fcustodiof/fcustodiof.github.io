@@ -14,18 +14,6 @@ angular.module('conteudo-home',[])
         $('.collapsible').collapsible();
         $('.dropdown-button').dropdown();        
     });
-    // alert("to na home");
-    $scope.inscrever = function(path){
-   		$location.path('/inscrever');
-   		$helper.setFrom(path);
-    };
-    $scope.editarPerfil = function(){
-    	$location.path('/editarPerfil');
-    };
-    $scope.abrirModalLogin = function(){
-        $('.button-collapse').sideNav('hide');
-        $('#ModalLogin').modal('open');
-    }
     var $doc = $('html, body, main');
     $('.scrollSuave').click(function() {
         $window.animate({
@@ -33,4 +21,12 @@ angular.module('conteudo-home',[])
         }, 500);
         return false;
     });
+    // alert("to na home");
+
+    $scope.editarPerfil = function(){
+    	$location.path('/editarPerfil');
+    };
+
+
+
 })

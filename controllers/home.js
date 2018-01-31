@@ -11,10 +11,14 @@ angular.module('home',[])
     // alert("to na home");
     $scope.inscrever = function(path){
    		$location.path('/inscrever');
-   		$helper.setFrom(path);
+   		console.log("home");
     };
     $scope.editarPerfil = function(){
     	$location.path('/editarPerfil');
+    };
+    $scope.pageLoginMob = function(){
+        console.log("chamou");
+        $location.path('/login-mobile');
     };
     var $doc = $('html, body');
     $('.scrollSuave').click(function() {

@@ -7,11 +7,6 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'angular-md5', 'login','ho
         $('.modal').modal();
         $('.collapsible').collapsible();
     });
-    var $doc = $('html, body');
-    $scope.inscrever = function(path){
-        $location.path('/inscrever');
-        $helper.setFrom(path);
-    };
 })
 
 .config(function($routeProvider, $locationProvider) {
@@ -28,6 +23,9 @@ angular.module('index',[ 'ngRoute', 'ui.materialize', 'angular-md5', 'login','ho
     }).when('/editar-perfil', {
         templateUrl: 'views/editar-perfil.html',
         controller: 'editarPerfilCtrl'
+    }).when('/login-mobile', {
+        templateUrl: 'views/login-mobile.html',
+        controller: 'loginCtrl'
     }).otherwise({
         redirectTo: "/"
     });

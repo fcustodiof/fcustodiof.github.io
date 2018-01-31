@@ -11,7 +11,6 @@ angular.module('inscrever',[])
           }
         );
     });
-    console.log($helper.getFrom());
     $scope.estados = [];
     $scope.cidades = [];
     $scope.confirmarSenha = "";
