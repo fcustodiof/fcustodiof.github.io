@@ -130,7 +130,12 @@ main {
 footer.page-footer {
   margin: 0;
 }
-
+.card-organizador{
+  background-color : #795548;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 150px;
+}
 .card-text-paralax{
   background: white;
   opacity: 0.6;
@@ -192,6 +197,18 @@ footer.page-footer {
   padding: 10% 2% 10% 2%;
   height: 100%;
   width: 100%;
+}
+
+.img-org-left{
+  position: absolute;
+  left: -200px;
+  top: -120px;
+}
+
+.img-org-right{
+  position: absolute;
+  right: -200px;
+  top: -120px;
 }
 
 nav ul a {
