@@ -66,16 +66,6 @@
 	  name: 'image',
 	  align: textureAlign,
 	  scale: { x: 1, y: 1 }
-	}, {
-	  file: 'img/desert-maps.jpg',
-	  name: 'maps',
-	  align: textureAlign,
-	  scale: { x: 0.8, y: 0.8 }
-	}, {
-	  file: 'img/noise.png',
-	  name: 'noise',
-	  repeat: true,
-	  fill: false
 	}];
 	
 	var getTextureIndex = function () {
