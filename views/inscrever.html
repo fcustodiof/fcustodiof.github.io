@@ -70,6 +70,10 @@
                     <label for="cep">CEP</label>
                     <input ng-model="usuario.cep" type="number" id="cep" required>
                 </div>
+                <div class="col s12 m4 l4">
+                    <label for="endereco">Endereço</label>
+                    <input ng-model="usuario.endereco" type="text" id="endereco" required>
+                </div>
             </div>
             <br>
             <br>
@@ -77,6 +81,12 @@
                 <div class="input-field col s12 m6 l6">
                     <input ng-model="usuario.email" id="email" type="email" class="validate" required>
                     <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <input ng-model="usuario.telefone" id="telefone" type="number" required>
+                    <label for="telefone">Telefone</label>
                 </div>
             </div>
             <div class="row">

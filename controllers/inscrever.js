@@ -13,18 +13,18 @@ angular.module('inscrever',[])
     });
     $scope.estados = [];
     $scope.cidades = [];
-    $scope.confirmarSenha = "";
+    $scope.confirmarSenha = "12";
     $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
-        nome:"",
-        sobrenome: "",
-        email: "",
+        nome:"Felipe",
+        sobrenome: "Custodio",
+        email: "f@email",
         sexo: "",
-        senha: "",
+        senha: "12",
         cpf: '',
-        rg: '',
+        rg: '12',
         cidade: "",
-        cep: "",
+        cep: "12",
         estado: "",
         nascimento: ""
     };
@@ -56,8 +56,21 @@ angular.module('inscrever',[])
                         if($scope.usuario.sexo !== ""){
                             if($('.datepicker').val() !== ""){
                                 $scope.usuario.nascimento = $('.datepicker').val();
-                                $scope.usuario.senha = md5.createHash($scope.usuario.senha);
-                                $request.cadastrar($scope.usuario)
+                                 var usuario = {
+                                    nome: $scope.usuario.nome,
+                                    sobrenome: $scope.usuario.sobrenome,
+                                    email: $scope.usuario.email,
+                                    sexo: $scope.usuario.sexo,
+                                    senha: $scope.usuario.senha,
+                                    cpf: $scope.usuario.cpf,
+                                    rg: $scope.usuario.rg,
+                                    cidade: $scope.usuario.cidade,
+                                    cep: $scope.usuario.cep,
+                                    estado: $scope.usuario.estado,
+                                    nascimento: $scope.usuario.nascimento
+                                };
+                                usuario.senha = md5.createHash($scope.usuario.senha); 
+                                $request.cadastrar(usuario)
                                     .then(function(response) {
                                         console.log(response);
                                     }, function(error) {
@@ -97,8 +110,18 @@ angular.module('inscrever',[])
         var Soma;
         var Resto;
         Soma = 0;
-        if (strCPF == "00000000000") return false;
-        
+        if (strCPF == "00000000000") return false;       
+        if (strCPF == "11111111111") return false;       
+        if (strCPF == "22222222222") return false;       
+        if (strCPF == "33333333333") return false;       
+        if (strCPF == "44444444444") return false;       
+        if (strCPF == "55555555555") return false;       
+        if (strCPF == "66666666666") return false;       
+        if (strCPF == "77777777777") return false;       
+        if (strCPF == "88888888888") return false;       
+        if (strCPF == "99999999999") return false;       
+        if (strCPF.length > 11) return false;
+               
         for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
         Resto = (Soma * 10) % 11;
         
@@ -112,6 +135,6 @@ angular.module('inscrever',[])
         if ((Resto == 10) || (Resto == 11))  Resto = 0;
         if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
         return true;
-    }
+    };
     
 })
