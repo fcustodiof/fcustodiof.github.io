@@ -34,7 +34,8 @@ angular.module('inscrever',[])
         today: 'Hoje',
         clear: 'Limpar',
         close: 'Ok',
-        closeOnSelect: false // Close upon selecting a date,
+        closeOnSelect: false, // Close upon selecting a date,
+        format: 'mm/d/yyyy',
       });
 
     $scope.getIndexEstado = function(){
@@ -56,21 +57,21 @@ angular.module('inscrever',[])
                         if($scope.usuario.sexo !== ""){
                             if($('.datepicker').val() !== ""){
                                 $scope.usuario.nascimento = $('.datepicker').val();
-                                 var usuario = {
-                                    nome: $scope.usuario.nome,
-                                    sobrenome: $scope.usuario.sobrenome,
-                                    email: $scope.usuario.email,
-                                    sexo: $scope.usuario.sexo,
-                                    senha: $scope.usuario.senha,
-                                    cpf: $scope.usuario.cpf,
-                                    rg: $scope.usuario.rg,
-                                    cidade: $scope.usuario.cidade,
-                                    cep: $scope.usuario.cep,
-                                    estado: $scope.usuario.estado,
-                                    nascimento: $scope.usuario.nascimento
-                                };
-                                usuario.senha = md5.createHash($scope.usuario.senha); 
-                                $request.cadastrar(usuario)
+                                //  var usuario = {
+                                //     nome: $scope.usuario.nome,
+                                //     sobrenome: $scope.usuario.sobrenome,
+                                //     email: $scope.usuario.email,
+                                //     sexo: $scope.usuario.sexo,
+                                //     senha: $scope.usuario.senha,
+                                //     cpf: $scope.usuario.cpf,
+                                //     rg: $scope.usuario.rg,
+                                //     cidade: $scope.usuario.cidade,
+                                //     cep: $scope.usuario.cep,
+                                //     estado: $scope.usuario.estado,
+                                //     nascimento: $scope.usuario.nascimento
+                                // };
+                                // usuario.senha = md5.createHash($scope.usuario.senha); 
+                                $request.cadastrar($scope.usuario)
                                     .then(function(response) {
                                         console.log(response);
                                     }, function(error) {
@@ -78,7 +79,6 @@ angular.module('inscrever',[])
                                     }
                                 );
                             }else{
-                                console.log($('.datepicker').val());
                                 Materialize.toast('Selecione sua data de nascimento', 4000, 'red');
                             }
                         }else{
