@@ -13,18 +13,18 @@ angular.module('inscrever',[])
     });
     $scope.estados = [];
     $scope.cidades = [];
-    $scope.confirmarSenha = "12";
+    $scope.confirmarSenha = "";
     $scope.sexos = [{nome:'Masculino',sigla:'m'}, {nome:'Feminino', sigla:'F'}, {nome:'Outro', sigla:'O'}];
     $scope.usuario = {
-        nome:"Felipe",
-        sobrenome: "Custodio",
-        email: "f@email",
+        nome:"",
+        sobrenome: "",
+        email: "",
         sexo: "",
-        senha: "12",
+        senha: "",
         cpf: '',
-        rg: '12',
+        rg: '',
         cidade: "",
-        cep: "12",
+        cep: "",
         estado: "",
         nascimento: ""
     };
@@ -121,7 +121,7 @@ angular.module('inscrever',[])
         if (strCPF == "88888888888") return false;       
         if (strCPF == "99999999999") return false;       
         if (strCPF.length > 11) return false;
-               
+
         for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
         Resto = (Soma * 10) % 11;
         
