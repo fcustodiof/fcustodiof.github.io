@@ -27,7 +27,8 @@ angular.module('inscrever',[])
         cep: "",
         estado: "",
         nascimento: "",
-        telefone:''
+        telefone: '',
+        endereco: ''
     };
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
